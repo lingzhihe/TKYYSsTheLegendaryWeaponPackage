@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>碳烤鱿鱼丝的传奇武器包 V1.4</name>
+  <author>碳烤鱿鱼丝</author>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <description>
+    碳烤鱿鱼丝的传奇武器包的1.4版本，原模组:https://steamcommunity.com/sharedfiles/filedetails/?id=2358986543
+    一个很简单的武器MOD，可以在 军工仿制工作台 制作知名武器或者在 投影工作台 制作应对恐怖敌人的强力神器。
+  </description>
+  <packageId>TKYYS.TKYYSsTheLegendaryWeaponPackage</packageId>
+</ModMetaData>
