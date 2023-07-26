@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--冰瀑MG3子弹 冰锥-->
+  <DamageDef>
+    <defName>TKYYS_IceBulletMG3</defName>
+    <label>冰锥</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} 沉眠于寒冷之中</deathMessage>
+    <hediff>TKYYS_IceCone</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <additionalHediffs>
+      <li>
+        <hediff>TKYYS_IceBulletSlowdown</hediff>
+        <severityPerDamageDealt>0.012</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  <!--电磁子弹-->
+  <DamageDef ParentName="StunBase">
+    <defName>TKYYS_EMPBullet</defName>
+    <label>电磁子弹</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} 被麻痹致死</deathMessage>
+    <hediff>Gunshot</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <!--额外添加-->
+    <harmsHealth>true</harmsHealth>
+    <defaultDamage>50</defaultDamage>
+    <explosionSnowMeltAmount>2</explosionSnowMeltAmount>
+    <externalViolenceForMechanoids>true</externalViolenceForMechanoids>
+    <explosionCellMote>Mote_BlastEMP</explosionCellMote>
+    <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+    <explosionInteriorMote>Mote_ElectricalSpark</explosionInteriorMote>
+    <soundExplosion>Explosion_EMP</soundExplosion>
+    <combatLogRules>Damage_EMP</combatLogRules>
+  </DamageDef>
+  <!--黑渊白花爆炸-->
+  <DamageDef Name="TKYYS_BlackAbyssWhiteFlower_Bomb">
+    <defName>TKYYS_BlackAbyssWhiteFlower_Bomb</defName>
+    <label>黑渊白花爆炸冲击</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} 回归了尘土</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+    <minDamageToFragment>777</minDamageToFragment>
+    <defaultDamage>888</defaultDamage>
+    <defaultStoppingPower>2</defaultStoppingPower>
+    <defaultArmorPenetration>5</defaultArmorPenetration>
+    <buildingDamageFactor>60</buildingDamageFactor>
+    <plantDamageFactor>4</plantDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>40</explosionHeatEnergyPerCell>
+    <explosionCellMote>Mote_BlastDry</explosionCellMote>
+    <explosionColorCenter>(0.1, 0.1, 0.1)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 1)</explosionColorEdge>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+    <additionalHediffs>
+      <li>
+        <hediff>TKYYS_BlackAbyssWhiteFlower_Hediff</hediff>
+        <severityPerDamageDealt>0.012</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  <!--阿莫斯之弓 冰块-->
+  <DamageDef Name="TKYYS_AmosBowIceBlock_Burst">
+    <defName>TKYYS_AmosBowIceBlock_Burst</defName>
+    <label>冰块</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <isRanged>true</isRanged>
+    <externalViolence>true</externalViolence>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <harmsHealth>true</harmsHealth>
+    <deathMessage>{0} 变成了冷鲜肉</deathMessage>
+    <hediff>TKYYS_IceBlock</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <minDamageToFragment>43</minDamageToFragment>
+    <defaultDamage>60</defaultDamage>
+    <defaultStoppingPower>2</defaultStoppingPower>
+    <defaultArmorPenetration>0.6</defaultArmorPenetration>
+    <buildingDamageFactor>2</buildingDamageFactor>
+    <plantDamageFactor>2</plantDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>-60</explosionHeatEnergyPerCell>
+    <explosionCellMote>Mote_BlastDry</explosionCellMote>
+    <explosionColorCenter>(1, 1, 1)</explosionColorCenter>
+    <explosionColorEdge>(0.72, 0.8, 1)</explosionColorEdge>
+    <soundExplosion>TKYYS_IceBurst_AmosBow</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+    <additionalHediffs>
+      <li>
+        <hediff>TKYYS_IceBulletSlowdown</hediff>
+        <severityPerDamageDealt>0.008</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  <!--M2火焰-->
+  <DamageDef ParentName="Flame">
+    <defName>TKYYS_M2_Flame</defName>
+    <workerClass>DamageWorker_Flame</workerClass>
+    <label>火焰</label>
+    <soundExplosion>TKYYS_Flame</soundExplosion>
+    <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+  </DamageDef>
+</Defs>
